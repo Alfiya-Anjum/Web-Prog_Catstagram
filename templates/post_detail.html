@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load comments_xtd %}
+{% load static %}
+
+{% block content %}
+<div class="post-detail">
+    <!-- Post Content -->
+    <h2>@{{ post.user }}</h2>
+    <img src="{{ post.image.url }}" alt="Post image">
+    <p>{{ post.caption }}</p>
+    <p>Posted on {{ post.created_at }}</p>
+    
+    <!-- Comments Section -->
+    <div class="comments-section">
+        <h3>Comments</h3>
+        {% render_xtdcomment_tree for post %}
+        {% render_xtdcomment_form for post %}
+    </div>
+</div>
+{% endblock %}
