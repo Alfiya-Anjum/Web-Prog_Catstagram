@@ -89,13 +89,13 @@ def index(request):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
-    context_object_name = 'post'  # Update this with the actual path to your template
+    context_object_name = 'post' 
 
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comments'] = XtdComment.objects.filter(
-            content_type__app_label='Catstagram',  # Use your actual app label here
+            content_type__app_label='Catstagram',  
             object_pk=self.object.id
         ).order_by('thread_id', 'order')
         return context

@@ -1,6 +1,6 @@
 import os
 
-code_dir_path = r"C:\Users\SAMSUNG\OneDrive\Documents\Web_Dev\Catstagram\Catstagram"  # Directory Path
+code_dir_path = r"C:\Users\SAMSUNG\OneDrive\Documents\Web_Dev\Catstagram\Catstagram"  
 
 # Initialize metrics
 loc = 0  # Lines of Code
